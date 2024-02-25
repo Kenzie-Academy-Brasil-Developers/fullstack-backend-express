@@ -1,5 +1,4 @@
-import { BeforeInsert, BeforeUpdate, Column, CreateDateColumn, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn} from "typeorm";
-import { getRounds, hashSync } from "bcryptjs";
+import { Column, CreateDateColumn, Entity, ManyToOne, PrimaryGeneratedColumn} from "typeorm";
 import Client from "./Clients.entity";
 
 @Entity('contacts')

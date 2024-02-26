@@ -9,7 +9,7 @@ import { verifyContactExists } from "../middleware/verifyContactExists.middlewar
 
 export const contactRouter: Router = Router()
 
-contactRouter.post('/', validateBody(createContactSchema), verifyToken, verifyPermissions, createContactController)
-contactRouter.get('/', readAllContactController)
+contactRouter.post('/', verifyToken, validateBody(createContactSchema), createContactController)
+contactRouter.get('/', verifyToken, readAllContactController)
 contactRouter.patch('/:id', validateBody(updateContactSchema), verifyToken, verifyContactExists, verifyPermissions, updateContactController)
-contactRouter.delete('/:id', verifyToken, verifyContactExists, verifyPermissions, verifyAdmin, deleteContactController)
+contactRouter.delete('/:id', verifyToken, verifyContactExists, verifyPermissions, verifyAdmin, deleteContactController) 

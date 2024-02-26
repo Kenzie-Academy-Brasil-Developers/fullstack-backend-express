@@ -3,8 +3,8 @@ import Client from "./Clients.entity";
 
 @Entity('contacts')
 export default class Contact {
-  @PrimaryGeneratedColumn('increment')
-  id: number
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
   @Column({ length: 150 })
   name: string
@@ -12,12 +12,12 @@ export default class Contact {
   @Column({ length: 150, unique: true })
   email: string
 
-  @Column({ length: 30 })
+  @Column({})
   cellphone: string
 
   @CreateDateColumn({ type: 'date' })
   createdAt: string
-
+  
   @UpdateDateColumn({ type: "date" })
   updatedAt: string;
 

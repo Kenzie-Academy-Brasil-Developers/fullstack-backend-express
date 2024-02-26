@@ -11,7 +11,7 @@ const verifyClientExists = async (
 ): Promise<void> => {
   const { id } = req.params;
   const client: Client | null = await clientRepo.findOneBy({
-    id: Number(id),
+    id: id,
   });
 
   if (!client) throw new AppError("Client not found", 404);

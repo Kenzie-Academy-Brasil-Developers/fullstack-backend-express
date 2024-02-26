@@ -6,4 +6,5 @@ import { sessionRouter } from "./session.router";
 export const routes: Router = Router()
 
 routes.use('/clients', clientRouter)
-routes.use("/login", sessionRouter);
+routes.use("/login", sessionRouter)
+routes.use("/contacts", sessionRouter)

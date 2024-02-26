@@ -6,7 +6,7 @@ export const Header = ({}) => {
         <StyledDiv>
             <Link to={"/"}><StyledImg  alt=""/></Link>
             <InnerDiv >
-                <Link className="loginLink" to={"/login"}>acesso</Link>
+                <Link className="loginLink" to={"/"}>acesso</Link>
                 <Link to={"/search"}><img className="magnifier"  alt="lupa de procurar"/></Link> 
             </InnerDiv>
         </StyledDiv>

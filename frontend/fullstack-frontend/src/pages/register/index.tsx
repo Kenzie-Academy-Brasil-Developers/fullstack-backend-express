@@ -35,7 +35,7 @@ export const RegisterPage = () => {
     <StyledRegisterPageContainer>
       <Header/>
       <StyledDiv>
-          <ParagraphBold className="back-text"> <img  alt="" /><Link className="link-text" to={"/login"}> voltar</Link></ParagraphBold>
+          <ParagraphBold className="back-text"> <img  alt="" /><Link className="link-text" to={"/"}> voltar</Link></ParagraphBold>
       </StyledDiv>
 
       <StyledFormSection>

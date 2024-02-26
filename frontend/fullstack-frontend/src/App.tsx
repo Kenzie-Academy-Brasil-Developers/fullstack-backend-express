@@ -1,13 +1,16 @@
 import GlobalStyle from './styles/GlobalStyle'
 import { RoutesMain } from './routes'
+import { AuthProvider } from './providers/AuthProvider'
 
 function App() {
 
   return (
     <>
       <GlobalStyle />
-          <RoutesMain />
-    </>
+      <AuthProvider>
+        <RoutesMain />
+      </AuthProvider>
+    </> 
   )
 }
 

@@ -1,6 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { LoginData, schema } from "./schema.ts"
+import { userAuth } from "../../hooks/useAuth.tsx"
 
 export const LoginPage = () => {
     const { signIn } = userAuth()
@@ -23,7 +24,6 @@ export const LoginPage = () => {
 
                 <button type="submit">Entrar</button>
             </form>
-
         </main>
     )
 }

@@ -1,4 +1,4 @@
-import { Column, CreateDateColumn, Entity, ManyToOne, PrimaryGeneratedColumn} from "typeorm";
+import { Column, CreateDateColumn, DeleteDateColumn, Entity, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn} from "typeorm";
 import Client from "./Clients.entity";
 
 @Entity('contacts')
@@ -17,6 +17,12 @@ export default class Contact {
 
   @CreateDateColumn({ type: 'date' })
   createdAt: string
+
+  @UpdateDateColumn({ type: "date" })
+  updatedAt: string;
+
+  @DeleteDateColumn({ type: "date", nullable: true })
+  deletedAt: string | null;
 
   @ManyToOne(() => Client, (client) => client.contact)
   client: Client

@@ -15,7 +15,6 @@ export const readAllClientsController = async (req: Request, res: Response): Pro
 
 export const updateClientController = async (req: Request, res: Response): Promise<Response> => {
   const { Client } = res.locals
-  console.log(Client)
   const newClient = await updateClientService(req.body, Client)
   return res.status(200).json(newClient)
 }

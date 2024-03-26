@@ -4,7 +4,7 @@ export const clientSchema = z.object({
     id: z.string(),
     name: z.string().max(150),
     email: z.string().email().max(150),
-    password: z.string().max(150),
+    password: z.string().min(6).max(150),
     admin: z.boolean().default(false),
     createdAt: z.string(),
     updatedAt: z.string(),

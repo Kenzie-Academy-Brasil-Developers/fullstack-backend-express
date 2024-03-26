@@ -4,12 +4,12 @@ import { ClientCreate, ClientReadReturn, ClientReturn, ClientUpdate } from "../i
 import { clientReturnListSchema, clientReturnSchema } from "../schemas/clients.schema";
 
 export const createClientService = async (data: ClientCreate): Promise<ClientReturn> => {
-    const client: Client = clientRepo.create(data)
+  const client: Client = clientRepo.create(data)
   
-    await clientRepo.save(client)
+  await clientRepo.save(client)
   
-    return clientReturnSchema.parse(client)
-  }
+  return clientReturnSchema.parse(client)
+}
 
 
 export const readAllClientService = async (): Promise<ClientReadReturn> => {
@@ -25,7 +25,7 @@ export const updateClientService = async (data: ClientUpdate, client: Client): P
   await clientRepo.save(clientUpdate)
 
   return clientReturnSchema.parse(clientUpdate)
-}
+} 
 
 export const deleteClientService = async (client: Client): Promise<void> => {
   await clientRepo.softRemove(client)

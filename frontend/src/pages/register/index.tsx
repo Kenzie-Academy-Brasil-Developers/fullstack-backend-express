@@ -42,18 +42,18 @@ export const RegisterPage = () => {
       <Title1 font="var(--color-blue)">Cadastrar-se</Title1>
 
         <StyledForm onSubmit={handleSubmit(onSubmit)}>
-          <Input type="text" {...register("name")} placeholder="Nome" error={errors.name} />
+          {/* <Input type="text" {...register("name")} placeholder="Nome" error={errors.name} />
 
           <Input type="email" {...register("email")} placeholder="E-mail" error={errors.email}/>
 
           <Input type="password" {...register("password")} placeholder="Senha 8 caracteres, letra maiúscula, minuscula, um número, e um caracter especial" error={errors.password}/>
 
           <Input type="password" {...register("confirm")} placeholder="Confirmar senha" error={errors.confirm}/>
-         
+          */}
           <StyledButton type="submit">Cadastrar-se</StyledButton>
         </StyledForm>
       </StyledFormSection>
-
+{/* fix this page later on */}
       <Footer position="unset"/>
     </StyledRegisterPageContainer>
   )
